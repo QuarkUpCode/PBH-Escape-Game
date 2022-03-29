@@ -25,12 +25,12 @@ t_values = np.arange(0.,0.01,0.00001)
 h_values = ondegrav(t_values,10.,2.E7,1.E20)
 bruit_values = bruit(t_values)
 
-masse_proposee = 1
+masse_proposee = 1		#set variables to be able to easily toggle off the user input process 
 separation_proposee = 1
 distance_proposee = 1
-# masse_proposee=float(input("Proposez une masse de trous noirs en kg"))
-# separation_proposee=float(input("Proposez une distance entre les trous noirs en mètres"))
-# distance_proposee=float(input("Proposez la distance entre la Terre et les trous noirs"))
+masse_proposee=float(input("Proposez une masse de trous noirs en kg"))
+separation_proposee=float(input("Proposez une distance entre les trous noirs en mètres"))
+distance_proposee=float(input("Proposez la distance entre la Terre et les trous noirs"))
 
 h_values_proposed = ondegrav(t_values,separation_proposee,distance_proposee,masse_proposee)
 
